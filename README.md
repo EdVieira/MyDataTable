@@ -1,2 +1,2 @@
 # MyDataTable
-MyDataTable is a JavaScript library to help you print your table data...
+MyDataTable is a JavaScript library to easily print tables.
