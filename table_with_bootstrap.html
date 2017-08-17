@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Data Table</title>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta charset="utf-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="table.min.js"></script>
+		<script type="text/javascript">
+			//Table array
+			var dataTable = {};
+
+			//Table head data array
+			var thead = ["id","name","category","city"];
+
+			//Table data array
+			var dados = [["1","Aaron","C-A","Dubai"],
+							["2","Abigail","C-A","Dubai"],
+							["3","Abilio","C-F","Dubai"],
+							["4","Adam","C-A","Dubai"],
+							["5","Adeline","C-F","Dubai"],
+							["6","Annie","C-A","Dubai"],
+							["7","Antonio","C-F","Dubai"],
+							["8","Arthur","C-A","Dubai"],
+							["9","Bella","C-F","Dubai"],
+							["10","Benjamin","C-A","Dubai"],
+							["11","Bianca","C-F","Dubai"],
+							["12","Edgar","C-A","Dubai"],
+							["13","Eduardo","C-F","Amsterdan"],
+							["14","Elena","C-A","Amsterdan"],
+							["15","Eli","C-F","Amsterdan"],
+							["16","Fernando","C-A","Amsterdan"],
+							["17","Francesca","C-F","Amsterdan"],
+							["18","Francisco","C-A","Amsterdan"],
+							["19","Gabriel","C-F","Amsterdan"],
+							["20","Gabriela","C-A","Amsterdan"],
+							["21","Georgia","C-F","Amsterdan"],
+							["22","Gustavo","C-A","Amsterdan"],
+							["23","Jackson","C-F","Amsterdan"]];
+
+			//Table footer data array
+			var tfooter = ["Count:",dados.length];
+
+			/* 
+			String:TableId | Div element ID
+			Array:tableData | table data array
+			Array:tableHead | table head data array
+			Array:tableFooter | table footer data array
+			String:CSSClasses | table CSS classes
+			Int:PageLength | amount of indexes per page
+			Array:PagehOptions | options array for amount of data per page
+			*/
+			dataTable[0] =  new MyDataTable('dataTable[0]', dados, thead, tfooter, "table table-hover");
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-3 col-md-6">
+					<h1>MyDataTable - <small>With simple Bootstrap</small></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-3 col-md-6 table-responsive">
+					<div id="dataTable[0]"></div>
+				</div>
+			</div>
+	
+		</div>
+		
+		<script type="text/javascript">
+			//Start table!
+			dataTable[0].startTable();
+		</script>	
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
