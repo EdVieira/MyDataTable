@@ -164,9 +164,9 @@ function MyDataTable(idTable, tableData, tableHead, tableFooter, CSSClasses, pag
 	this.searchData = function () 
 	{
 		//Busca na Tabela
-		    var busca = document.getElementById(this.searchID).value;
+		    var search = document.getElementById(this.searchID).value;
 		    var res = [null];
-		    if (busca.length < 1) {
+		    if (search.length < 1) {
 		    	res = this.data;
 		    	this.dataFiltrados = res;
 		    }else{
@@ -175,7 +175,7 @@ function MyDataTable(idTable, tableData, tableHead, tableFooter, CSSClasses, pag
 			    	//Percorre Colunas <td>
 			    	var t = false;
 			    	for (var j = 0; j < this.data[i].length; j++) {
-			    		if(this.data[i][j].toLowerCase().indexOf(busca.toLowerCase()) != -1){
+			    		if(this.data[i][j].toLowerCase().indexOf(search.toLowerCase()) != -1){
 			    			t = true;
 			    		}
 			    	}
